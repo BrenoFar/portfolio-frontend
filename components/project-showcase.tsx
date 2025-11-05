@@ -10,7 +10,7 @@ export function ProjectShowcase() {
       title: "Deska",
       description:
         "A 1v1 designer-client collaboration platform that streamlines graphic design projects through structured workflows. Clients receive a unique project ID to share with designers, who then manage the entire project lifecycle from briefing to completion.",
-      technologies: ["Spring Boot", "PostgreSQL", "Next.js", "TypeScript", "Tailwind CSS"],
+      technologies: ["Spring Boot", "PostgreSQL", "React + JavaScript"],
       backend: "Spring Boot",
       frontend: "Next.js",
       features: [
