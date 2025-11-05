@@ -14,7 +14,7 @@ export function ProjectShowcase() {
       backend: "Spring Boot",
       frontend: "Next.js",
       features: [
-        "Domain-Driven Design architecture",
+        "Services Oriented architecture",
         "4-stage workflow: Briefing → Moodboard → Production → Finish",
         "Client approval system for each project stage",
         "Real-time project status tracking and logs",
