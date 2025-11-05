@@ -1,19 +1,21 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { Menu, X, Github, Linkedin, Mail } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-foreground">{"<Developer />"}</h1>
+            <h1 className="text-xl font-bold text-foreground">
+              {"<BrenoFarDEV />"}
+            </h1>
           </div>
 
           {/* Desktop Navigation */}
@@ -47,15 +49,46 @@ export function Header() {
           {/* Social Links & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-2">
             <ThemeToggle />
-            <Button variant="ghost" size="icon" className="text-foreground hover:text-foreground hover:bg-muted">
-              <Github className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="text-foreground hover:text-foreground hover:bg-muted">
-              <Linkedin className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="text-foreground hover:text-foreground hover:bg-muted">
-              <Mail className="h-5 w-5" />
-            </Button>
+            <a
+              href="https://github.com/BrenoFar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-foreground hover:text-foreground hover:bg-muted"
+              >
+                <Github className="h-5 w-5" />
+              </Button>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/breno-farias-2864271a7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-foreground hover:text-foreground hover:bg-muted"
+              >
+                <Linkedin className="h-5 w-5" />
+              </Button>
+            </a>
+
+            <a
+              href="mailto:brenodasfarias2001@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-foreground hover:text-foreground hover:bg-muted"
+              >
+                <Mail className="h-5 w-5" />
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,7 +100,11 @@ export function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-foreground hover:text-foreground hover:bg-muted"
             >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
@@ -105,5 +142,5 @@ export function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }
